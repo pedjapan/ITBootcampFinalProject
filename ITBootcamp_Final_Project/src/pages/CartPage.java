@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utils.ExcelUtils;
+
 public class CartPage {
 	private WebDriver driver;
 	private Properties locators;
@@ -33,5 +35,16 @@ public class CartPage {
 
 	public void setQuantity(int quantity) {
 		this.getQuantity().toString();
+	}
+	
+	public boolean isInCart() {
+		boolean isAdded = false;
+		ExcelUtils.setExcell("data/pet-store-data.xlsx");
+		ExcelUtils.setWorkSheet(0);
+		for (int i = 0; i < ExcelUtils.getRowNumber(); i++) {
+			ExcelUtils.getDataAt(i, 1);
+		}
+		return isAdded;
+		
 	}
 }
