@@ -40,9 +40,9 @@ public class RegistrationPage {
 		return this.driver.findElement(By.xpath(locators.getProperty("repeat_password_input")));
 	}
 
-	public void setRepeatPassword(String pass) {
+	public void setRepeatPassword(String password) {
 		this.getRepeatPassword().clear();
-		this.getRepeatPassword().sendKeys(pass);
+		this.getRepeatPassword().sendKeys(password);
 	}
 
 	public WebElement getFirstName() {

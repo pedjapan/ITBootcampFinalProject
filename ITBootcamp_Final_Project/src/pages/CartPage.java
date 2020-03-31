@@ -1,5 +1,6 @@
 package pages;
 
+import java.util.List;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
@@ -13,22 +14,29 @@ public class CartPage {
 	private WebDriver driver;
 	private Properties locators;
 	private WebDriverWait waiter;
-	
 
 	public CartPage(WebDriver driver, Properties locators, WebDriverWait waiter) {
 		this.driver = driver;
 		this.locators = locators;
 		this.waiter = waiter;
 	}
-	
+
 	public WebElement getProceedToCheckout() {
 		return this.driver.findElement(By.xpath(locators.getProperty("proceed_to_checkout")));
 	}
-	
+
 	public void setProceedToCheckout() {
 		this.getProceedToCheckout().click();
 	}
+
+	public WebElement getSubTotalPrice() {
+		return this.driver.findElement(By.xpath(locators.getProperty("sub_total_price")));
+	}
 	
+	public List<WebElement> getListOfItemsPrice() {
+		return this.driver.findElements(By.xpath(locators.getProperty("item_price_in_list")));
+	}
+
 	public WebElement getQuantity() {
 		return this.driver.findElement(By.xpath(locators.getProperty("product_quantity")));
 	}
@@ -36,15 +44,73 @@ public class CartPage {
 	public void setQuantity(int quantity) {
 		this.getQuantity().toString();
 	}
-	
+
+	public WebElement getEmptyCartMsg() {
+		return this.driver.findElement(By.xpath(locators.getProperty("cart_is_empty_msg")));
+	}
+
+	public void deleteCookiesFromCartPage() {
+		driver.navigate().to(locators.getProperty("cart_url"));
+		driver.manage().deleteAllCookies();
+		driver.navigate().refresh();
+	}
+
+	public String getProductsIdFromCart() {
+		List<WebElement> productsId = this.driver.findElements(By.xpath(locators.getProperty("productId_in_cart")));
+		String productIdInCart = null;
+		for (int i = 0; i < productsId.size(); i++) {
+			productIdInCart = productsId.get(i).getText();
+		}
+		return productIdInCart;
+	}
+
 	public boolean isInCart() {
 		boolean isAdded = false;
 		ExcelUtils.setExcell("data/pet-store-data.xlsx");
 		ExcelUtils.setWorkSheet(0);
-		for (int i = 0; i < ExcelUtils.getRowNumber(); i++) {
-			ExcelUtils.getDataAt(i, 1);
+		for (int i = 1; i < ExcelUtils.getRowNumber(); i++) {
+			String itemId = ExcelUtils.getDataAt(i, 0);
+			if (getProductsIdFromCart().contains(itemId)) {
+				isAdded = true;
+			}
 		}
 		return isAdded;
-		
 	}
+
+	public int getPriceConvertedToInt() {
+		String subTotalString = this.getSubTotalPrice().getText().substring(12);
+		double doublePrice = Double.parseDouble(subTotalString);
+		// Because double is not working well on summing, and we need this 
+		// for comparing purpose, converting sum into int type
+		int totalPrice = (int) (doublePrice * 100);
+		return totalPrice;
+	}	
+
+	public int calculateTotalSumOfPriceFromList() {
+		List<WebElement> totalPrice = this.getListOfItemsPrice();
+		double totalSum = 0;
+		for (int i = 0; i < totalPrice.size(); i++) {
+			String itemPrice = totalPrice.get(i).getText().substring(1, 5);
+			double price = Double.parseDouble(itemPrice);
+			totalSum += price;
+		}
+		// Because double is not working well on summing, and we need this 
+		// for comparing purpose, converting sum into int type
+		int sum = (int) (totalSum * 100);
+		return sum;
+	}
+
+	public boolean isTotalEquals() {
+		return this.getPriceConvertedToInt() == this.calculateTotalSumOfPriceFromList();
+	}
+
+	public boolean cartIsEmpty() {
+		try {
+			getEmptyCartMsg().isDisplayed();
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+	}
+
 }

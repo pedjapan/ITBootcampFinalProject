@@ -38,14 +38,13 @@ public class RegistrationPageTest {
 		SoftAssert sa = new SoftAssert();
 		ExcelUtils.setExcell("data/pet-store-data.xlsx");
 		ExcelUtils.setWorkSheet(1);
-		
+		// Write user ID in pet-store-data.xlsx file for later use
+		// in SignInPageTest as username when testing user login
+		ExcelUtils.setUniqueRandomId();
+
 		for (int i = 1; i < ExcelUtils.getRowNumber(); i++) {
 			driver.navigate().to(this.locators.getProperty("registration_url"));
-			String uniqueID = UUID.randomUUID().toString();
-			String userID = uniqueID.substring(0, 7);
-			// Write user ID in pet-store-data.xlsx file for later use
-			// in SignInPageTest as username when test user login
-			ExcelUtils.setDataAt(i, 0, userID);
+			String userID = ExcelUtils.getDataAt(i, 0);
 			String password = ExcelUtils.getDataAt(i, 1);
 			String name = ExcelUtils.getDataAt(i, 2);
 			String lastName = ExcelUtils.getDataAt(i, 3);
@@ -66,7 +65,6 @@ public class RegistrationPageTest {
 
 		}
 		sa.assertAll();
-
 	}
 
 	@AfterClass

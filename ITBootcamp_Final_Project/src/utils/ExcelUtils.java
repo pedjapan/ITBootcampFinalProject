@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.UUID;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -118,6 +119,13 @@ public class ExcelUtils {
 			System.out.println(e.toString());
 			System.out.println("Doslo je do greske!");
 			return -1;
+		}
+	}
+	public static void setUniqueRandomId() {
+		for(int i = 1; i < getRowNumber(); i++) {
+			String uniqueId = UUID.randomUUID().toString();
+			uniqueId = uniqueId.substring(0, 7);
+			setDataAt(i, 0, uniqueId);
 		}
 	}
 
