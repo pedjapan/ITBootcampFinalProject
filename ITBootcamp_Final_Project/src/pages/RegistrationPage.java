@@ -5,6 +5,7 @@ import java.util.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class RegistrationPage {
@@ -135,6 +136,24 @@ public class RegistrationPage {
 		this.getCountry().sendKeys(country);
 	}
 
+	public WebElement getLanguagePreference() {
+		return this.driver.findElement(By.xpath(locators.getProperty("select_language")));
+	}
+
+	public void setLanguagePreference(String preferedLanguage) {
+		Select s = new Select(this.getLanguagePreference());
+		s.selectByValue(preferedLanguage);
+	}
+
+	public WebElement getFavouriteCategory() {
+		return this.driver.findElement(By.xpath(locators.getProperty("select_favorite")));
+	}
+
+	public void setFavouriteCategory(String favouriteCategory) {
+		Select s = new Select(this.getFavouriteCategory());
+		s.selectByValue(favouriteCategory);
+	}
+
 	public WebElement getSaveAccountInfo() {
 		return this.driver.findElement(By.xpath(locators.getProperty("save_account_info")));
 	}
@@ -144,7 +163,8 @@ public class RegistrationPage {
 	}
 
 	public void fillForm(String userid, String password, String pass, String name, String lastName, String email,
-			String phone, String address1, String address2, String city, String state, String zip, String country) {
+			String phone, String address1, String address2, String city, String state, String zip, String country,
+			String preferedLanguage, String favouriteCategory) {
 		this.setUserID(userid);
 		this.setNewPassword(password);
 		this.setRepeatPassword(pass);
@@ -158,6 +178,8 @@ public class RegistrationPage {
 		this.setState(state);
 		this.setZip(zip);
 		this.setCountry(country);
+		this.setLanguagePreference(preferedLanguage);
+		this.setFavouriteCategory(favouriteCategory);
 		this.setSaveAccountInfo();
 	}
 

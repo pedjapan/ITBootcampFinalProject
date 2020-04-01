@@ -58,6 +58,7 @@ public class SignInPageTest {
 
 	@AfterClass
 	public void afterClass() {
+		ExcelUtils.closeExcell();
 		this.driver.close();
 	}
 }

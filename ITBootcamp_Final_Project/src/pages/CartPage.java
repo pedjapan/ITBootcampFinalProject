@@ -81,7 +81,7 @@ public class CartPage {
 		String subTotalString = this.getSubTotalPrice().getText().substring(12);
 		double doublePrice = Double.parseDouble(subTotalString);
 		// Because double is not working well on summing, and we need this 
-		// for comparing purpose, converting sum into int type
+		// for comparing purpose, I'm converting sum into int type
 		int totalPrice = (int) (doublePrice * 100);
 		return totalPrice;
 	}	
@@ -95,7 +95,7 @@ public class CartPage {
 			totalSum += price;
 		}
 		// Because double is not working well on summing, and we need this 
-		// for comparing purpose, converting sum into int type
+		// for comparing purpose, I'm converting sum into int type
 		int sum = (int) (totalSum * 100);
 		return sum;
 	}

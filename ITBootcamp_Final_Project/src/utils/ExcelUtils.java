@@ -5,6 +5,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 import java.util.UUID;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
@@ -121,6 +124,7 @@ public class ExcelUtils {
 			return -1;
 		}
 	}
+	// method for pet-store-data.xlsx and for  https://petstore.octoperf.com/ only
 	public static void setUniqueRandomId() {
 		for(int i = 1; i < getRowNumber(); i++) {
 			String uniqueId = UUID.randomUUID().toString();
@@ -128,6 +132,33 @@ public class ExcelUtils {
 			setDataAt(i, 0, uniqueId);
 		}
 	}
+	
+	public static void setLanguagePreference() {
+		List<String> languages = new ArrayList<String>();
+		languages.add("english");
+		languages.add("japanese");
+		Random randLanguage = new Random();
+		for (int i = 1; i < getRowNumber(); i++) {
+			int randomIndex = randLanguage.nextInt(languages.size());
+			setDataAt(i, 12, languages.get(randomIndex));
+		}
+	}
+
+	// method for pet-store-data.xlsx and for  https://petstore.octoperf.com/ only
+	public static void setFavorite() {
+		List<String> category = new ArrayList<String>();
+		category.add("FISH");
+		category.add("DOGS");
+		category.add("REPTILES");
+		category.add("CATS");
+		category.add("BIRDS");
+		Random randCategory = new Random();
+		for (int i = 1; i < getRowNumber(); i++) {
+			int randomIndex = randCategory.nextInt(category.size());
+			setDataAt(i, 13, category.get(randomIndex));
+		}
+	}
+
 
 	public static boolean closeExcell() {
 		if (wb != null) {

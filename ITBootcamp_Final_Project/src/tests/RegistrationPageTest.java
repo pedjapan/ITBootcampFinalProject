@@ -41,6 +41,8 @@ public class RegistrationPageTest {
 		// Write user ID in pet-store-data.xlsx file for later use
 		// in SignInPageTest as username when testing user login
 		ExcelUtils.setUniqueRandomId();
+		ExcelUtils.setLanguagePreference();
+		ExcelUtils.setFavorite();
 
 		for (int i = 1; i < ExcelUtils.getRowNumber(); i++) {
 			driver.navigate().to(this.locators.getProperty("registration_url"));
@@ -56,10 +58,11 @@ public class RegistrationPageTest {
 			String state = ExcelUtils.getDataAt(i, 9);
 			String zip = ExcelUtils.getDataAt(i, 10);
 			String country = ExcelUtils.getDataAt(i, 11);
-			// dodati ostala polja iz forme
-
+			String language = ExcelUtils.getDataAt(i, 12);
+			String category =  ExcelUtils.getDataAt(i, 13);
+			
 			newUser.fillForm(userID, password, password, name, lastName, email, phone, address1, address2, city, state,
-					zip, country);
+					zip, country,language, category);
 
 			sa.assertTrue(newUser.registeredOK());
 
