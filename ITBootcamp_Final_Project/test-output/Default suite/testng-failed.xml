@@ -5,8 +5,8 @@
     <classes>
       <class name="tests.CartPageTest">
         <methods>
+          <include name="compareTotalPrices"/>
           <include name="afterClass"/>
-          <include name="addToCartTest"/>
           <include name="setup"/>
         </methods>
       </class> <!-- tests.CartPageTest -->

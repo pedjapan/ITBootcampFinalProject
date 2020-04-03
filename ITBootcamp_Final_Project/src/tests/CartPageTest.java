@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,6 +16,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+import org.testng.xml.ISuiteParser;
 
 import pages.CartPage;
 import pages.StoreItemPage;
@@ -39,7 +41,7 @@ public class CartPageTest {
 	}
 
 	@Test(priority = 1)
-	public void addToCartTest() {
+	public void isInCart() {
 		StoreItemPage storeItem = new StoreItemPage(driver, locators, waiter);
 		CartPage cart = new CartPage(driver, locators, waiter);
 		SoftAssert sa = new SoftAssert();
@@ -48,8 +50,9 @@ public class CartPageTest {
 
 		for (int i = 1; i < ExcelUtils.getRowNumber(); i++) {
 			driver.navigate().to(ExcelUtils.getDataAt(i, 1));
+			String itemId = ExcelUtils.getDataAt(i, 0);
 			storeItem.setAddToCart();
-			sa.assertTrue(cart.isInCart());
+			sa.assertTrue(cart.isProductAddedToCart(itemId));
 		}
 		sa.assertAll();
 	}
@@ -57,6 +60,7 @@ public class CartPageTest {
 	@Test(priority = 2)
 	public void compareTotalPrices() {
 		CartPage cart = new CartPage(driver, locators, waiter);
+
 		Assert.assertTrue(cart.isTotalEquals());
 	}
 
@@ -78,7 +82,7 @@ public class CartPageTest {
 	@AfterClass
 	public void afterClass() {
 		ExcelUtils.closeExcell();
-		this.driver.close();
+		// this.driver.close();
 	}
 
 }

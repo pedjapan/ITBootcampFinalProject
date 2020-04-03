@@ -32,24 +32,25 @@ public class PetStoreMenuTest {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.navigate().to(this.locators.getProperty("store_menu_page_url"));
-
 	}
 
 	@Test(priority = 1)
 	public void allLinksVerifyTest() {
+		driver.navigate().to(this.locators.getProperty("store_menu_page_url"));
 		PetStoreMenuPage petStoreMenuPage = new PetStoreMenuPage(driver, locators, waiter);
 		Assert.assertTrue(petStoreMenuPage.allLinksVerify());
 	}
 
 	@Test(priority = 2)
 	public void linksTakesToCorrectPageTest() {
+		driver.navigate().to(this.locators.getProperty("store_menu_page_url"));
 		PetStoreMenuPage petStoreMenuPage = new PetStoreMenuPage(driver, locators, waiter);
 		Assert.assertTrue(petStoreMenuPage.allLinksWorks());
 	}
 
 	@Test(priority = 3)
 	public void logInBtnTest() {
+		driver.navigate().to(this.locators.getProperty("store_menu_page_url"));
 		PetStoreMenuPage petStoreMenuPage = new PetStoreMenuPage(driver, locators, waiter);
 		Assert.assertTrue(petStoreMenuPage.toLogInPage());
 	}

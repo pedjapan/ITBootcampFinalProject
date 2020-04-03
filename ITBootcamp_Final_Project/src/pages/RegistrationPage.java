@@ -154,12 +154,12 @@ public class RegistrationPage {
 		s.selectByValue(favouriteCategory);
 	}
 
-	public WebElement getSaveAccountInfo() {
+	public WebElement getSaveAccountInfoBtn() {
 		return this.driver.findElement(By.xpath(locators.getProperty("save_account_info")));
 	}
 
-	public void setSaveAccountInfo() {
-		this.getSaveAccountInfo().click();
+	public void clickOnSaveAccountInfoBtn() {
+		this.getSaveAccountInfoBtn().click();
 	}
 
 	public void fillForm(String userid, String password, String pass, String name, String lastName, String email,
@@ -180,10 +180,10 @@ public class RegistrationPage {
 		this.setCountry(country);
 		this.setLanguagePreference(preferedLanguage);
 		this.setFavouriteCategory(favouriteCategory);
-		this.setSaveAccountInfo();
+		this.clickOnSaveAccountInfoBtn();
 	}
 
-	public boolean registeredOK() {
+	public boolean verifySuccessfulRegistration() {
 		boolean registrationOK = false;
 		if (this.driver.getCurrentUrl().contains(locators.getProperty("store_menu_page_url"))) {
 			registrationOK = true;

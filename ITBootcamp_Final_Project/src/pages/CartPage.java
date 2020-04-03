@@ -32,9 +32,13 @@ public class CartPage {
 	public WebElement getSubTotalPrice() {
 		return this.driver.findElement(By.xpath(locators.getProperty("sub_total_price")));
 	}
-	
+
 	public List<WebElement> getListOfItemsPrice() {
 		return this.driver.findElements(By.xpath(locators.getProperty("item_price_in_list")));
+	}
+
+	public List<WebElement> getProductsIdFromCart() {
+		return this.driver.findElements(By.xpath(locators.getProperty("productId_in_cart")));
 	}
 
 	public WebElement getQuantity() {
@@ -55,36 +59,25 @@ public class CartPage {
 		driver.navigate().refresh();
 	}
 
-	public String getProductsIdFromCart() {
-		List<WebElement> productsId = this.driver.findElements(By.xpath(locators.getProperty("productId_in_cart")));
-		String productIdInCart = null;
+	public boolean isProductAddedToCart(String idFromFile) {
+		List<WebElement> productsId = this.getProductsIdFromCart();
 		for (int i = 0; i < productsId.size(); i++) {
-			productIdInCart = productsId.get(i).getText();
-		}
-		return productIdInCart;
-	}
-
-	public boolean isInCart() {
-		boolean isAdded = false;
-		ExcelUtils.setExcell("data/pet-store-data.xlsx");
-		ExcelUtils.setWorkSheet(0);
-		for (int i = 1; i < ExcelUtils.getRowNumber(); i++) {
-			String itemId = ExcelUtils.getDataAt(i, 0);
-			if (getProductsIdFromCart().contains(itemId)) {
-				isAdded = true;
+			String productId = productsId.get(i).getText();
+			if (productId.contentEquals(idFromFile)) {
+				return true;
 			}
 		}
-		return isAdded;
+		return false;
 	}
 
 	public int getPriceConvertedToInt() {
 		String subTotalString = this.getSubTotalPrice().getText().substring(12);
 		double doublePrice = Double.parseDouble(subTotalString);
-		// Because double is not working well on summing, and we need this 
+		// Because double is not working well on summing, and we need this
 		// for comparing purpose, I'm converting sum into int type
 		int totalPrice = (int) (doublePrice * 100);
 		return totalPrice;
-	}	
+	}
 
 	public int calculateTotalSumOfPriceFromList() {
 		List<WebElement> totalPrice = this.getListOfItemsPrice();
@@ -94,7 +87,7 @@ public class CartPage {
 			double price = Double.parseDouble(itemPrice);
 			totalSum += price;
 		}
-		// Because double is not working well on summing, and we need this 
+		// Because double is not working well on summing, and we need this
 		// for comparing purpose, I'm converting sum into int type
 		int sum = (int) (totalSum * 100);
 		return sum;

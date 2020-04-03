@@ -64,7 +64,7 @@ public class RegistrationPageTest {
 			newUser.fillForm(userID, password, password, name, lastName, email, phone, address1, address2, city, state,
 					zip, country,language, category);
 
-			sa.assertTrue(newUser.registeredOK());
+			sa.assertTrue(newUser.verifySuccessfulRegistration());
 
 		}
 		sa.assertAll();
