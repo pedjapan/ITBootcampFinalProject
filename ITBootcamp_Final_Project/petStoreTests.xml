@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite
+	name="Pet Store https://petstore.octoperf.com/ on three browsers.">
+	<test name="Functional testing 1 on Chrome">
+		<parameter name="browser" value="Chrome" />
+		<classes>
+			<class name="tests.HomePageTest" />
+			<class name="tests.RegistrationPageTest" />
+			<class name="tests.SignInPageTest" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="Functional testing 2 on Chrome">
+		<parameter name="browser" value="Chrome" />
+		<classes>
+			<class name="tests.PetStoreMenuTest" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="Functional testing 3 on Chrome">
+		<parameter name="browser" value="Chrome" />
+		<classes>
+			<class name="tests.CartPageTest" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="Functional testing 1 on Firefox">
+		<parameter name="browser" value="Firefox" />
+		<classes>
+			<class name="tests.HomePageTest" />
+			<class name="tests.RegistrationPageTest" />
+			<class name="tests.SignInPageTest" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="Functional testing 2 on Firefox">
+		<parameter name="browser" value="Firefox" />
+		<classes>
+			<class name="tests.PetStoreMenuTest" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="Functional testing 3 on Firefox">
+		<parameter name="browser" value="Firefox" />
+		<classes>
+			<class name="tests.CartPageTest" />
+		</classes>
+	</test> <!-- Test -->
+	
+	<test name="Functional testing 1 on Edge">
+		<parameter name="browser" value="Edge" />
+		<classes>
+			<class name="tests.HomePageTest" />
+			<class name="tests.RegistrationPageTest" />
+			<class name="tests.SignInPageTest" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="Functional testing 2 on Edge">
+		<parameter name="browser" value="Edge" />
+		<classes>
+			<class name="tests.PetStoreMenuTest" />
+		</classes>
+	</test> <!-- Test -->
+	<test name="Functional testing 3 on Edge">
+		<parameter name="browser" value="Edge" />
+		<classes>
+			<class name="tests.CartPageTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

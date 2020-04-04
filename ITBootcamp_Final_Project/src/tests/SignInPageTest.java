@@ -8,14 +8,15 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import pages.HomePage;
 import pages.SignInPage;
 import utils.ExcelUtils;
 
@@ -25,11 +26,21 @@ public class SignInPageTest {
 	private WebDriverWait waiter;
 	
 	@BeforeClass
-	public void setup() throws FileNotFoundException, IOException {
-		System.setProperty("webdriver.chrome.driver", "driver-lib\\chromedriver.exe");
-		this.driver = new ChromeDriver();
+	@Parameters("browser")
+	public void setup(String browser) throws FileNotFoundException, IOException {
+		if(browser.equalsIgnoreCase("firefox")) {
+			System.setProperty("webdriver.gecko.driver", "driver-lib\\geckodriver.exe");
+			this.driver = new FirefoxDriver();
+		} else if (browser.equalsIgnoreCase("chrome")) {
+			System.setProperty("webdriver.chrome.driver", "driver-lib\\chromedriver.exe");
+			this.driver = new ChromeDriver();			
+		} else if (browser.equalsIgnoreCase("edge")) {
+			System.setProperty("webdriver.edge.driver", "driver-lib\\msedgedriver.exe");
+			this.driver = new EdgeDriver();
+		}
 		this.locators =  new Properties();
 		locators.load(new FileInputStream("config/petstore.properties"));
+		driver.navigate().to(this.locators.getProperty("sign_in_url"));
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -53,8 +64,6 @@ public class SignInPageTest {
 		}
 		sa.assertAll();		
 	}
-	
-
 
 	@AfterClass
 	public void afterClass() {
