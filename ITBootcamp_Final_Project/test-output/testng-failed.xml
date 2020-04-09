@@ -7,7 +7,7 @@
       <class name="tests.PetStoreMenuTest">
         <methods>
           <include name="setup"/>
-          <include name="linksTakesToCorrectPageTest"/>
+          <include name="centerNavLinksWork"/>
           <include name="afterClass"/>
         </methods>
       </class> <!-- tests.PetStoreMenuTest -->

@@ -3,10 +3,12 @@ package tests;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -46,21 +48,65 @@ public class PetStoreMenuTest {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 
-	@Test(priority = 1)
+	@Test
 	public void allLinksVerifyTest() {
 		driver.navigate().to(this.locators.getProperty("store_menu_page_url"));
-		PetStoreMenuPage petStoreMenuPage = new PetStoreMenuPage(driver, locators, waiter);
-		Assert.assertTrue(petStoreMenuPage.allLinksVerify());
+		PetStoreMenuPage petStoreMenuPageAllLinks = new PetStoreMenuPage(driver, locators, waiter);
+		Assert.assertTrue(petStoreMenuPageAllLinks.allLinksVerify());
 	}
 
-	@Test(priority = 2)
-	public void linksTakesToCorrectPageTest() {
+	@Test
+	public void leftNavLinksTakesToCorrectPageTest() {
+		PetStoreMenuPage PetStoreLeftLinks = new PetStoreMenuPage(driver, locators, waiter);
+		SoftAssert sa = new SoftAssert();
+
 		driver.navigate().to(this.locators.getProperty("store_menu_page_url"));
-		PetStoreMenuPage petStoreMenuPage = new PetStoreMenuPage(driver, locators, waiter);
-		Assert.assertTrue(petStoreMenuPage.allLinksWorks());
+		List<WebElement> leftNavLinks = PetStoreLeftLinks.getLeftNavLinks();
+		for (int i = 0; i < leftNavLinks.size(); i++) {
+			leftNavLinks.get(i).click();
+			String currentUrl = driver.getCurrentUrl().toLowerCase();
+			driver.navigate().back();
+			leftNavLinks = PetStoreLeftLinks.getLeftNavLinks();
+			sa.assertTrue(currentUrl.contains(leftNavLinks.get(i).getAttribute("href").toLowerCase()));
+		}
+		sa.assertAll();
 	}
 
-	@Test(priority = 3)
+	@Test
+	public void upperNavLinksCorrectPageTest() {
+		PetStoreMenuPage PetStoreUpperLinks = new PetStoreMenuPage(driver, locators, waiter);
+		SoftAssert sa = new SoftAssert();
+
+		driver.navigate().to(this.locators.getProperty("store_menu_page_url"));
+		List<WebElement> upperNavLinks = PetStoreUpperLinks.getUpperNavLinks();
+		for (int i = 0; i < upperNavLinks.size(); i++) {
+			upperNavLinks.get(i).click();
+			String currentUrl = driver.getCurrentUrl().toLowerCase();
+			driver.navigate().back();
+			upperNavLinks = PetStoreUpperLinks.getUpperNavLinks();
+			sa.assertTrue(currentUrl.contains(upperNavLinks.get(i).getAttribute("href").toLowerCase()));
+		}
+		sa.assertAll();
+	}
+
+	@Test
+	public void centerNavLinksWork() {
+		PetStoreMenuPage PetStoreCenterLinks = new PetStoreMenuPage(driver, locators, waiter);
+		SoftAssert sa = new SoftAssert();
+
+		driver.navigate().to(this.locators.getProperty("store_menu_page_url"));
+		List<WebElement> centerNavLinks = PetStoreCenterLinks.getCenterNavLinks();
+		for (int i = 0; i < centerNavLinks.size(); i++) {
+			centerNavLinks.get(i).click();
+			String currentUrl = driver.getCurrentUrl().toLowerCase();
+			driver.navigate().back();
+			centerNavLinks = PetStoreCenterLinks.getCenterNavLinks();
+			sa.assertTrue(currentUrl.contains(centerNavLinks.get(i).getAttribute("href").toLowerCase()));
+		}
+		sa.assertAll();
+	}
+
+	@Test
 	public void logInBtnTest() {
 		driver.navigate().to(this.locators.getProperty("store_menu_page_url"));
 		PetStoreMenuPage petStoreMenuPage = new PetStoreMenuPage(driver, locators, waiter);
@@ -69,7 +115,8 @@ public class PetStoreMenuTest {
 
 	@AfterClass
 	public void afterClass() {
-		this.driver.close();
+		 this.driver.close();
 	}
 
 }
+

@@ -49,6 +49,19 @@ public class PetStoreMenuPage {
 	public void setHelpBtn() {
 		this.getHelpBtn().click();
 	}
+	
+	public List<WebElement> getLeftNavLinks() {
+		return this.driver.findElements(By.xpath(locators.getProperty("left_navigaton_links")));				
+	}
+	
+	public List<WebElement> getUpperNavLinks() {
+		return this.driver.findElements(By.xpath(locators.getProperty("upper_navigation_links")));
+	}
+	
+	public List<WebElement> getCenterNavLinks() {
+		return this.driver.findElements(By.xpath(locators.getProperty("center_navigation_links")));
+	}
+
 
 	public boolean leftNavLinksVerify() {
 		List<WebElement> leftNavLinks = driver.findElements(By.xpath(locators.getProperty("left_navigaton_links")));
@@ -111,7 +124,7 @@ public class PetStoreMenuPage {
 		}
 		return allVerified;
 	}
-
+	// for allLinksWorks() method if we want to test links without SoftAssert
 	public boolean leftNavLinksWorks() {
 		List<WebElement> leftNavLinks = driver.findElements(By.xpath(locators.getProperty("left_navigaton_links")));
 		boolean workingLeftLinks = false;
@@ -127,7 +140,7 @@ public class PetStoreMenuPage {
 		}
 		return workingLeftLinks;
 	}
-
+	// for allLinksWorks() method if we want to test links without SoftAssert
 	public boolean upperNavLinksWork() {
 		List<WebElement> upperNavLinks = driver.findElements(By.xpath(locators.getProperty("upper_navigation_links")));
 		boolean workingUpperLinks = false;
@@ -143,7 +156,7 @@ public class PetStoreMenuPage {
 		}
 		return workingUpperLinks;
 	}
-
+	// for allLinksWorks() method if we want to test links without SoftAssert
 	public boolean centerNavLinksWork() {
 		List<WebElement> centerNavLinks = driver
 				.findElements(By.xpath(locators.getProperty("center_navigation_links")));
@@ -160,7 +173,7 @@ public class PetStoreMenuPage {
 		}
 		return workingCenterLinks;
 	}
-
+	// for testing all working links without SoftAssert
 	public boolean allLinksWorks() {
 		boolean allWorking = false;
 		if (leftNavLinksWorks() && upperNavLinksWork() && centerNavLinksWork()) {

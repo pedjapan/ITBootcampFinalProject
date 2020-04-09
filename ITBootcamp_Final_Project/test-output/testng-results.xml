@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="27" passed="26">
+<testng-results skipped="0" failed="1" ignored="0" total="33" passed="32">
   <reporter-output>
   </reporter-output>
-  <suite name="Pet Store https://petstore.octoperf.com/ on three browsers." duration-ms="825964" started-at="2020-04-04T21:30:59Z" finished-at="2020-04-04T21:44:44Z">
+  <suite name="Pet Store https://petstore.octoperf.com/ on three browsers." duration-ms="789374" started-at="2020-04-09T17:14:11Z" finished-at="2020-04-09T17:27:20Z">
     <groups>
     </groups>
-    <test name="Functional testing 1 on Chrome" duration-ms="239594" started-at="2020-04-04T21:30:59Z" finished-at="2020-04-04T21:34:58Z">
+    <test name="Functional testing 1 on Chrome" duration-ms="236004" started-at="2020-04-09T17:14:11Z" finished-at="2020-04-09T17:18:07Z">
       <class name="tests.SignInPageTest">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.SignInPageTest@3532ec19]" name="setup" is-config="true" duration-ms="10672" started-at="2020-04-04T21:33:56Z" finished-at="2020-04-04T21:34:07Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.SignInPageTest@3532ec19]" name="setup" is-config="true" duration-ms="11987" started-at="2020-04-09T17:17:08Z" finished-at="2020-04-09T17:17:20Z">
           <params>
             <param index="0">
               <value>
@@ -18,17 +18,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="signIn()[pri:0, instance:tests.SignInPageTest@3532ec19]" name="signIn" duration-ms="51405" started-at="2020-04-04T21:34:07Z" finished-at="2020-04-04T21:34:58Z">
+        <test-method status="PASS" signature="signIn()[pri:0, instance:tests.SignInPageTest@3532ec19]" name="signIn" duration-ms="46852" started-at="2020-04-09T17:17:20Z" finished-at="2020-04-09T17:18:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signIn -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.SignInPageTest@3532ec19]" name="afterClass" is-config="true" duration-ms="88" started-at="2020-04-04T21:34:58Z" finished-at="2020-04-04T21:34:58Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.SignInPageTest@3532ec19]" name="afterClass" is-config="true" duration-ms="96" started-at="2020-04-09T17:18:07Z" finished-at="2020-04-09T17:18:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- tests.SignInPageTest -->
       <class name="tests.HomePageTest">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.HomePageTest@5e5792a0]" name="setup" is-config="true" duration-ms="14173" started-at="2020-04-04T21:30:59Z" finished-at="2020-04-04T21:31:13Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.HomePageTest@5e5792a0]" name="setup" is-config="true" duration-ms="15840" started-at="2020-04-09T17:14:11Z" finished-at="2020-04-09T17:14:27Z">
           <params>
             <param index="0">
               <value>
@@ -39,17 +39,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="enterStore()[pri:0, instance:tests.HomePageTest@5e5792a0]" name="enterStore" duration-ms="1531" started-at="2020-04-04T21:31:13Z" finished-at="2020-04-04T21:31:14Z">
+        <test-method status="PASS" signature="enterStore()[pri:0, instance:tests.HomePageTest@5e5792a0]" name="enterStore" duration-ms="2400" started-at="2020-04-09T17:14:27Z" finished-at="2020-04-09T17:14:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterStore -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.HomePageTest@5e5792a0]" name="afterClass" is-config="true" duration-ms="96" started-at="2020-04-04T21:31:14Z" finished-at="2020-04-04T21:31:14Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.HomePageTest@5e5792a0]" name="afterClass" is-config="true" duration-ms="157" started-at="2020-04-09T17:14:29Z" finished-at="2020-04-09T17:14:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- tests.HomePageTest -->
       <class name="tests.RegistrationPageTest">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.RegistrationPageTest@26653222]" name="setup" is-config="true" duration-ms="10322" started-at="2020-04-04T21:31:14Z" finished-at="2020-04-04T21:31:25Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.RegistrationPageTest@26653222]" name="setup" is-config="true" duration-ms="10335" started-at="2020-04-09T17:14:30Z" finished-at="2020-04-09T17:14:40Z">
           <params>
             <param index="0">
               <value>
@@ -60,19 +60,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="registeringUsers()[pri:0, instance:tests.RegistrationPageTest@26653222]" name="registeringUsers" duration-ms="151175" started-at="2020-04-04T21:31:25Z" finished-at="2020-04-04T21:33:56Z">
+        <test-method status="PASS" signature="registeringUsers()[pri:0, instance:tests.RegistrationPageTest@26653222]" name="registeringUsers" duration-ms="148156" started-at="2020-04-09T17:14:40Z" finished-at="2020-04-09T17:17:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registeringUsers -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.RegistrationPageTest@26653222]" name="afterClass" is-config="true" duration-ms="93" started-at="2020-04-04T21:33:56Z" finished-at="2020-04-04T21:33:56Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.RegistrationPageTest@26653222]" name="afterClass" is-config="true" duration-ms="93" started-at="2020-04-09T17:17:08Z" finished-at="2020-04-09T17:17:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- tests.RegistrationPageTest -->
     </test> <!-- Functional testing 1 on Chrome -->
-    <test name="Functional testing 2 on Chrome" duration-ms="20968" started-at="2020-04-04T21:34:58Z" finished-at="2020-04-04T21:35:19Z">
+    <test name="Functional testing 2 on Chrome" duration-ms="20813" started-at="2020-04-09T17:18:07Z" finished-at="2020-04-09T17:18:28Z">
       <class name="tests.PetStoreMenuTest">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.PetStoreMenuTest@6eebc39e]" name="setup" is-config="true" duration-ms="9993" started-at="2020-04-04T21:34:58Z" finished-at="2020-04-04T21:35:08Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.PetStoreMenuTest@464bee09]" name="setup" is-config="true" duration-ms="9646" started-at="2020-04-09T17:18:07Z" finished-at="2020-04-09T17:18:17Z">
           <params>
             <param index="0">
               <value>
@@ -83,27 +83,35 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="allLinksVerifyTest()[pri:1, instance:tests.PetStoreMenuTest@6eebc39e]" name="allLinksVerifyTest" duration-ms="5589" started-at="2020-04-04T21:35:08Z" finished-at="2020-04-04T21:35:14Z">
+        <test-method status="PASS" signature="allLinksVerifyTest()[pri:0, instance:tests.PetStoreMenuTest@464bee09]" name="allLinksVerifyTest" duration-ms="5265" started-at="2020-04-09T17:18:17Z" finished-at="2020-04-09T17:18:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- allLinksVerifyTest -->
-        <test-method status="PASS" signature="linksTakesToCorrectPageTest()[pri:2, instance:tests.PetStoreMenuTest@6eebc39e]" name="linksTakesToCorrectPageTest" duration-ms="4759" started-at="2020-04-04T21:35:14Z" finished-at="2020-04-04T21:35:19Z">
+        <test-method status="PASS" signature="centerNavLinksWork()[pri:0, instance:tests.PetStoreMenuTest@464bee09]" name="centerNavLinksWork" duration-ms="2018" started-at="2020-04-09T17:18:22Z" finished-at="2020-04-09T17:18:24Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- linksTakesToCorrectPageTest -->
-        <test-method status="PASS" signature="logInBtnTest()[pri:3, instance:tests.PetStoreMenuTest@6eebc39e]" name="logInBtnTest" duration-ms="503" started-at="2020-04-04T21:35:19Z" finished-at="2020-04-04T21:35:19Z">
+        </test-method> <!-- centerNavLinksWork -->
+        <test-method status="PASS" signature="leftNavLinksTakesToCorrectPageTest()[pri:0, instance:tests.PetStoreMenuTest@464bee09]" name="leftNavLinksTakesToCorrectPageTest" duration-ms="1512" started-at="2020-04-09T17:18:24Z" finished-at="2020-04-09T17:18:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- leftNavLinksTakesToCorrectPageTest -->
+        <test-method status="PASS" signature="logInBtnTest()[pri:0, instance:tests.PetStoreMenuTest@464bee09]" name="logInBtnTest" duration-ms="604" started-at="2020-04-09T17:18:26Z" finished-at="2020-04-09T17:18:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logInBtnTest -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.PetStoreMenuTest@6eebc39e]" name="afterClass" is-config="true" duration-ms="89" started-at="2020-04-04T21:35:19Z" finished-at="2020-04-04T21:35:19Z">
+        <test-method status="PASS" signature="upperNavLinksCorrectPageTest()[pri:0, instance:tests.PetStoreMenuTest@464bee09]" name="upperNavLinksCorrectPageTest" duration-ms="1645" started-at="2020-04-09T17:18:26Z" finished-at="2020-04-09T17:18:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- upperNavLinksCorrectPageTest -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.PetStoreMenuTest@464bee09]" name="afterClass" is-config="true" duration-ms="98" started-at="2020-04-09T17:18:28Z" finished-at="2020-04-09T17:18:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- tests.PetStoreMenuTest -->
     </test> <!-- Functional testing 2 on Chrome -->
-    <test name="Functional testing 3 on Chrome" duration-ms="20655" started-at="2020-04-04T21:35:19Z" finished-at="2020-04-04T21:35:40Z">
+    <test name="Functional testing 3 on Chrome" duration-ms="21397" started-at="2020-04-09T17:18:28Z" finished-at="2020-04-09T17:18:50Z">
       <class name="tests.CartPageTest">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.CartPageTest@3c0ecd4b]" name="setup" is-config="true" duration-ms="10361" started-at="2020-04-04T21:35:19Z" finished-at="2020-04-04T21:35:30Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.CartPageTest@3c0ecd4b]" name="setup" is-config="true" duration-ms="10440" started-at="2020-04-09T17:18:28Z" finished-at="2020-04-09T17:18:39Z">
           <params>
             <param index="0">
               <value>
@@ -114,27 +122,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="isInCart()[pri:1, instance:tests.CartPageTest@3c0ecd4b]" name="isInCart" duration-ms="6304" started-at="2020-04-04T21:35:30Z" finished-at="2020-04-04T21:35:36Z">
+        <test-method status="PASS" signature="isInCart()[pri:1, instance:tests.CartPageTest@3c0ecd4b]" name="isInCart" duration-ms="6882" started-at="2020-04-09T17:18:39Z" finished-at="2020-04-09T17:18:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isInCart -->
-        <test-method status="PASS" signature="compareTotalPrices()[pri:2, instance:tests.CartPageTest@3c0ecd4b]" name="compareTotalPrices" duration-ms="251" started-at="2020-04-04T21:35:36Z" finished-at="2020-04-04T21:35:36Z">
+        <test-method status="PASS" signature="compareTotalPrices()[pri:2, instance:tests.CartPageTest@3c0ecd4b]" name="compareTotalPrices" duration-ms="298" started-at="2020-04-09T17:18:45Z" finished-at="2020-04-09T17:18:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- compareTotalPrices -->
-        <test-method status="PASS" signature="deleteCookiesTest()[pri:3, instance:tests.CartPageTest@3c0ecd4b]" name="deleteCookiesTest" duration-ms="3732" started-at="2020-04-04T21:35:36Z" finished-at="2020-04-04T21:35:40Z">
+        <test-method status="PASS" signature="deleteCookiesTest()[pri:3, instance:tests.CartPageTest@3c0ecd4b]" name="deleteCookiesTest" duration-ms="3676" started-at="2020-04-09T17:18:46Z" finished-at="2020-04-09T17:18:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteCookiesTest -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.CartPageTest@3c0ecd4b]" name="afterClass" is-config="true" duration-ms="1" started-at="2020-04-04T21:35:40Z" finished-at="2020-04-04T21:35:40Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.CartPageTest@3c0ecd4b]" name="afterClass" is-config="true" duration-ms="99" started-at="2020-04-09T17:18:49Z" finished-at="2020-04-09T17:18:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- tests.CartPageTest -->
     </test> <!-- Functional testing 3 on Chrome -->
-    <test name="Functional testing 1 on Firefox" duration-ms="205180" started-at="2020-04-04T21:35:40Z" finished-at="2020-04-04T21:39:05Z">
+    <test name="Functional testing 1 on Firefox" duration-ms="184829" started-at="2020-04-09T17:18:50Z" finished-at="2020-04-09T17:21:54Z">
       <class name="tests.SignInPageTest">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.SignInPageTest@402a079c]" name="setup" is-config="true" duration-ms="13144" started-at="2020-04-04T21:38:08Z" finished-at="2020-04-04T21:38:21Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.SignInPageTest@402a079c]" name="setup" is-config="true" duration-ms="8522" started-at="2020-04-09T17:21:04Z" finished-at="2020-04-09T17:21:13Z">
           <params>
             <param index="0">
               <value>
@@ -145,17 +153,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="signIn()[pri:0, instance:tests.SignInPageTest@402a079c]" name="signIn" duration-ms="41139" started-at="2020-04-04T21:38:21Z" finished-at="2020-04-04T21:39:02Z">
+        <test-method status="PASS" signature="signIn()[pri:0, instance:tests.SignInPageTest@402a079c]" name="signIn" duration-ms="39007" started-at="2020-04-09T17:21:13Z" finished-at="2020-04-09T17:21:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signIn -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.SignInPageTest@402a079c]" name="afterClass" is-config="true" duration-ms="2858" started-at="2020-04-04T21:39:02Z" finished-at="2020-04-04T21:39:05Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.SignInPageTest@402a079c]" name="afterClass" is-config="true" duration-ms="2775" started-at="2020-04-09T17:21:52Z" finished-at="2020-04-09T17:21:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- tests.SignInPageTest -->
       <class name="tests.HomePageTest">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.HomePageTest@42dafa95]" name="setup" is-config="true" duration-ms="36242" started-at="2020-04-04T21:35:40Z" finished-at="2020-04-04T21:36:16Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.HomePageTest@42dafa95]" name="setup" is-config="true" duration-ms="24198" started-at="2020-04-09T17:18:50Z" finished-at="2020-04-09T17:19:14Z">
           <params>
             <param index="0">
               <value>
@@ -166,17 +174,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="enterStore()[pri:0, instance:tests.HomePageTest@42dafa95]" name="enterStore" duration-ms="4281" started-at="2020-04-04T21:36:16Z" finished-at="2020-04-04T21:36:21Z">
+        <test-method status="PASS" signature="enterStore()[pri:0, instance:tests.HomePageTest@42dafa95]" name="enterStore" duration-ms="2234" started-at="2020-04-09T17:19:14Z" finished-at="2020-04-09T17:19:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterStore -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.HomePageTest@42dafa95]" name="afterClass" is-config="true" duration-ms="7765" started-at="2020-04-04T21:36:21Z" finished-at="2020-04-04T21:36:28Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.HomePageTest@42dafa95]" name="afterClass" is-config="true" duration-ms="5228" started-at="2020-04-09T17:19:16Z" finished-at="2020-04-09T17:19:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- tests.HomePageTest -->
       <class name="tests.RegistrationPageTest">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.RegistrationPageTest@6500df86]" name="setup" is-config="true" duration-ms="8748" started-at="2020-04-04T21:36:28Z" finished-at="2020-04-04T21:36:37Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.RegistrationPageTest@6500df86]" name="setup" is-config="true" duration-ms="6120" started-at="2020-04-09T17:19:21Z" finished-at="2020-04-09T17:19:27Z">
           <params>
             <param index="0">
               <value>
@@ -187,19 +195,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="registeringUsers()[pri:0, instance:tests.RegistrationPageTest@6500df86]" name="registeringUsers" duration-ms="88237" started-at="2020-04-04T21:36:37Z" finished-at="2020-04-04T21:38:05Z">
+        <test-method status="PASS" signature="registeringUsers()[pri:0, instance:tests.RegistrationPageTest@6500df86]" name="registeringUsers" duration-ms="94464" started-at="2020-04-09T17:19:27Z" finished-at="2020-04-09T17:21:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registeringUsers -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.RegistrationPageTest@6500df86]" name="afterClass" is-config="true" duration-ms="2765" started-at="2020-04-04T21:38:05Z" finished-at="2020-04-04T21:38:08Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.RegistrationPageTest@6500df86]" name="afterClass" is-config="true" duration-ms="2281" started-at="2020-04-09T17:21:02Z" finished-at="2020-04-09T17:21:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- tests.RegistrationPageTest -->
     </test> <!-- Functional testing 1 on Firefox -->
-    <test name="Functional testing 2 on Firefox" duration-ms="22438" started-at="2020-04-04T21:39:05Z" finished-at="2020-04-04T21:39:28Z">
+    <test name="Functional testing 2 on Firefox" duration-ms="19893" started-at="2020-04-09T17:21:54Z" finished-at="2020-04-09T17:22:14Z">
       <class name="tests.PetStoreMenuTest">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.PetStoreMenuTest@1ce92674]" name="setup" is-config="true" duration-ms="8200" started-at="2020-04-04T21:39:05Z" finished-at="2020-04-04T21:39:13Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.PetStoreMenuTest@1ce92674]" name="setup" is-config="true" duration-ms="6126" started-at="2020-04-09T17:21:54Z" finished-at="2020-04-09T17:22:01Z">
           <params>
             <param index="0">
               <value>
@@ -210,27 +218,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="allLinksVerifyTest()[pri:1, instance:tests.PetStoreMenuTest@1ce92674]" name="allLinksVerifyTest" duration-ms="5781" started-at="2020-04-04T21:39:13Z" finished-at="2020-04-04T21:39:19Z">
+        <test-method status="PASS" signature="allLinksVerifyTest()[pri:0, instance:tests.PetStoreMenuTest@1ce92674]" name="allLinksVerifyTest" duration-ms="6640" started-at="2020-04-09T17:22:01Z" finished-at="2020-04-09T17:22:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- allLinksVerifyTest -->
-        <test-method status="FAIL" signature="linksTakesToCorrectPageTest()[pri:2, instance:tests.PetStoreMenuTest@1ce92674]" name="linksTakesToCorrectPageTest" duration-ms="3781" started-at="2020-04-04T21:39:19Z" finished-at="2020-04-04T21:39:23Z">
+        <test-method status="FAIL" signature="centerNavLinksWork()[pri:0, instance:tests.PetStoreMenuTest@1ce92674]" name="centerNavLinksWork" duration-ms="300" started-at="2020-04-09T17:22:07Z" finished-at="2020-04-09T17:22:07Z">
           <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
               <![CDATA[Element <area href="Catalog.action?viewCategory=&categoryId=BIRDS"> could not be scrolled into view
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
 System info: host: 'DESKTOP-GLG4RJ7', ip: '192.168.0.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200403064753, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 12676, moz:profile: C:\Users\Panic\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 979e295d-6e2b-4da9-98d9-853ce2201c18]]>
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200403064753, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 8328, moz:profile: C:\Users\Panic\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f40a2994-0819-4d35-bce6-f4aa215b504a]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementNotInteractableException: Element <area href="Catalog.action?viewCategory=&categoryId=BIRDS"> could not be scrolled into view
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
 System info: host: 'DESKTOP-GLG4RJ7', ip: '192.168.0.10', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200403064753, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 12676, moz:profile: C:\Users\Panic\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 979e295d-6e2b-4da9-98d9-853ce2201c18
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 74.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200403064753, moz:geckodriverVersion: 0.26.0, moz:headless: false, moz:processID: 8328, moz:profile: C:\Users\Panic\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: f40a2994-0819-4d35-bce6-f4aa215b504a
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -243,9 +251,7 @@ at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverComman
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
 at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
 at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-at pages.PetStoreMenuPage.centerNavLinksWork(PetStoreMenuPage.java:152)
-at pages.PetStoreMenuPage.allLinksWorks(PetStoreMenuPage.java:166)
-at tests.PetStoreMenuTest.linksTakesToCorrectPageTest(PetStoreMenuTest.java:60)
+at tests.PetStoreMenuTest.centerNavLinksWork(PetStoreMenuTest.java:100)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -276,20 +282,28 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- linksTakesToCorrectPageTest -->
-        <test-method status="PASS" signature="logInBtnTest()[pri:3, instance:tests.PetStoreMenuTest@1ce92674]" name="logInBtnTest" duration-ms="422" started-at="2020-04-04T21:39:23Z" finished-at="2020-04-04T21:39:23Z">
+        </test-method> <!-- centerNavLinksWork -->
+        <test-method status="PASS" signature="leftNavLinksTakesToCorrectPageTest()[pri:0, instance:tests.PetStoreMenuTest@1ce92674]" name="leftNavLinksTakesToCorrectPageTest" duration-ms="1391" started-at="2020-04-09T17:22:07Z" finished-at="2020-04-09T17:22:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- leftNavLinksTakesToCorrectPageTest -->
+        <test-method status="PASS" signature="logInBtnTest()[pri:0, instance:tests.PetStoreMenuTest@1ce92674]" name="logInBtnTest" duration-ms="344" started-at="2020-04-09T17:22:09Z" finished-at="2020-04-09T17:22:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logInBtnTest -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.PetStoreMenuTest@1ce92674]" name="afterClass" is-config="true" duration-ms="4223" started-at="2020-04-04T21:39:23Z" finished-at="2020-04-04T21:39:28Z">
+        <test-method status="PASS" signature="upperNavLinksCorrectPageTest()[pri:0, instance:tests.PetStoreMenuTest@1ce92674]" name="upperNavLinksCorrectPageTest" duration-ms="1500" started-at="2020-04-09T17:22:09Z" finished-at="2020-04-09T17:22:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- upperNavLinksCorrectPageTest -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.PetStoreMenuTest@1ce92674]" name="afterClass" is-config="true" duration-ms="3561" started-at="2020-04-09T17:22:11Z" finished-at="2020-04-09T17:22:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- tests.PetStoreMenuTest -->
     </test> <!-- Functional testing 2 on Firefox -->
-    <test name="Functional testing 3 on Firefox" duration-ms="19126" started-at="2020-04-04T21:39:28Z" finished-at="2020-04-04T21:39:47Z">
+    <test name="Functional testing 3 on Firefox" duration-ms="21439" started-at="2020-04-09T17:22:14Z" finished-at="2020-04-09T17:22:36Z">
       <class name="tests.CartPageTest">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.CartPageTest@3f49dace]" name="setup" is-config="true" duration-ms="8303" started-at="2020-04-04T21:39:28Z" finished-at="2020-04-04T21:39:36Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.CartPageTest@3f49dace]" name="setup" is-config="true" duration-ms="8398" started-at="2020-04-09T17:22:14Z" finished-at="2020-04-09T17:22:23Z">
           <params>
             <param index="0">
               <value>
@@ -300,27 +314,27 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="isInCart()[pri:1, instance:tests.CartPageTest@3f49dace]" name="isInCart" duration-ms="6390" started-at="2020-04-04T21:39:36Z" finished-at="2020-04-04T21:39:42Z">
+        <test-method status="PASS" signature="isInCart()[pri:1, instance:tests.CartPageTest@3f49dace]" name="isInCart" duration-ms="5190" started-at="2020-04-09T17:22:23Z" finished-at="2020-04-09T17:22:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isInCart -->
-        <test-method status="PASS" signature="compareTotalPrices()[pri:2, instance:tests.CartPageTest@3f49dace]" name="compareTotalPrices" duration-ms="172" started-at="2020-04-04T21:39:42Z" finished-at="2020-04-04T21:39:43Z">
+        <test-method status="PASS" signature="compareTotalPrices()[pri:2, instance:tests.CartPageTest@3f49dace]" name="compareTotalPrices" duration-ms="94" started-at="2020-04-09T17:22:28Z" finished-at="2020-04-09T17:22:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- compareTotalPrices -->
-        <test-method status="PASS" signature="deleteCookiesTest()[pri:3, instance:tests.CartPageTest@3f49dace]" name="deleteCookiesTest" duration-ms="4260" started-at="2020-04-04T21:39:43Z" finished-at="2020-04-04T21:39:47Z">
+        <test-method status="PASS" signature="deleteCookiesTest()[pri:3, instance:tests.CartPageTest@3f49dace]" name="deleteCookiesTest" duration-ms="4312" started-at="2020-04-09T17:22:28Z" finished-at="2020-04-09T17:22:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteCookiesTest -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.CartPageTest@3f49dace]" name="afterClass" is-config="true" duration-ms="0" started-at="2020-04-04T21:39:47Z" finished-at="2020-04-04T21:39:47Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.CartPageTest@3f49dace]" name="afterClass" is-config="true" duration-ms="3445" started-at="2020-04-09T17:22:32Z" finished-at="2020-04-09T17:22:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- tests.CartPageTest -->
     </test> <!-- Functional testing 3 on Firefox -->
-    <test name="Functional testing 1 on Edge" duration-ms="252854" started-at="2020-04-04T21:39:47Z" finished-at="2020-04-04T21:44:00Z">
+    <test name="Functional testing 1 on Edge" duration-ms="239747" started-at="2020-04-09T17:22:36Z" finished-at="2020-04-09T17:26:35Z">
       <class name="tests.SignInPageTest">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.SignInPageTest@5cb9f472]" name="setup" is-config="true" duration-ms="15181" started-at="2020-04-04T21:42:57Z" finished-at="2020-04-04T21:43:12Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.SignInPageTest@5cb9f472]" name="setup" is-config="true" duration-ms="12869" started-at="2020-04-09T17:25:35Z" finished-at="2020-04-09T17:25:48Z">
           <params>
             <param index="0">
               <value>
@@ -331,17 +345,17 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="signIn()[pri:0, instance:tests.SignInPageTest@5cb9f472]" name="signIn" duration-ms="47422" started-at="2020-04-04T21:43:12Z" finished-at="2020-04-04T21:44:00Z">
+        <test-method status="PASS" signature="signIn()[pri:0, instance:tests.SignInPageTest@5cb9f472]" name="signIn" duration-ms="47425" started-at="2020-04-09T17:25:48Z" finished-at="2020-04-09T17:26:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signIn -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.SignInPageTest@5cb9f472]" name="afterClass" is-config="true" duration-ms="139" started-at="2020-04-04T21:44:00Z" finished-at="2020-04-04T21:44:00Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.SignInPageTest@5cb9f472]" name="afterClass" is-config="true" duration-ms="169" started-at="2020-04-09T17:26:35Z" finished-at="2020-04-09T17:26:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- tests.SignInPageTest -->
       <class name="tests.HomePageTest">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.HomePageTest@59494225]" name="setup" is-config="true" duration-ms="23038" started-at="2020-04-04T21:39:47Z" finished-at="2020-04-04T21:40:10Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.HomePageTest@59494225]" name="setup" is-config="true" duration-ms="28292" started-at="2020-04-09T17:22:36Z" finished-at="2020-04-09T17:23:04Z">
           <params>
             <param index="0">
               <value>
@@ -352,17 +366,17 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="enterStore()[pri:0, instance:tests.HomePageTest@59494225]" name="enterStore" duration-ms="8857" started-at="2020-04-04T21:40:10Z" finished-at="2020-04-04T21:40:19Z">
+        <test-method status="PASS" signature="enterStore()[pri:0, instance:tests.HomePageTest@59494225]" name="enterStore" duration-ms="2963" started-at="2020-04-09T17:23:04Z" finished-at="2020-04-09T17:23:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- enterStore -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.HomePageTest@59494225]" name="afterClass" is-config="true" duration-ms="760" started-at="2020-04-04T21:40:19Z" finished-at="2020-04-04T21:40:20Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.HomePageTest@59494225]" name="afterClass" is-config="true" duration-ms="124" started-at="2020-04-09T17:23:07Z" finished-at="2020-04-09T17:23:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- tests.HomePageTest -->
       <class name="tests.RegistrationPageTest">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.RegistrationPageTest@6e1567f1]" name="setup" is-config="true" duration-ms="11116" started-at="2020-04-04T21:40:20Z" finished-at="2020-04-04T21:40:31Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.RegistrationPageTest@6e1567f1]" name="setup" is-config="true" duration-ms="9892" started-at="2020-04-09T17:23:07Z" finished-at="2020-04-09T17:23:17Z">
           <params>
             <param index="0">
               <value>
@@ -373,19 +387,19 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="registeringUsers()[pri:0, instance:tests.RegistrationPageTest@6e1567f1]" name="registeringUsers" duration-ms="145252" started-at="2020-04-04T21:40:31Z" finished-at="2020-04-04T21:42:56Z">
+        <test-method status="PASS" signature="registeringUsers()[pri:0, instance:tests.RegistrationPageTest@6e1567f1]" name="registeringUsers" duration-ms="137873" started-at="2020-04-09T17:23:17Z" finished-at="2020-04-09T17:25:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registeringUsers -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.RegistrationPageTest@6e1567f1]" name="afterClass" is-config="true" duration-ms="1084" started-at="2020-04-04T21:42:56Z" finished-at="2020-04-04T21:42:57Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.RegistrationPageTest@6e1567f1]" name="afterClass" is-config="true" duration-ms="135" started-at="2020-04-09T17:25:35Z" finished-at="2020-04-09T17:25:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- tests.RegistrationPageTest -->
     </test> <!-- Functional testing 1 on Edge -->
-    <test name="Functional testing 2 on Edge" duration-ms="22569" started-at="2020-04-04T21:44:00Z" finished-at="2020-04-04T21:44:22Z">
+    <test name="Functional testing 2 on Edge" duration-ms="21995" started-at="2020-04-09T17:26:35Z" finished-at="2020-04-09T17:26:57Z">
       <class name="tests.PetStoreMenuTest">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.PetStoreMenuTest@25bbe1b6]" name="setup" is-config="true" duration-ms="10674" started-at="2020-04-04T21:44:00Z" finished-at="2020-04-04T21:44:10Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.PetStoreMenuTest@25bbe1b6]" name="setup" is-config="true" duration-ms="9721" started-at="2020-04-09T17:26:35Z" finished-at="2020-04-09T17:26:45Z">
           <params>
             <param index="0">
               <value>
@@ -396,27 +410,35 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="allLinksVerifyTest()[pri:1, instance:tests.PetStoreMenuTest@25bbe1b6]" name="allLinksVerifyTest" duration-ms="5240" started-at="2020-04-04T21:44:10Z" finished-at="2020-04-04T21:44:16Z">
+        <test-method status="PASS" signature="allLinksVerifyTest()[pri:0, instance:tests.PetStoreMenuTest@25bbe1b6]" name="allLinksVerifyTest" duration-ms="6255" started-at="2020-04-09T17:26:45Z" finished-at="2020-04-09T17:26:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- allLinksVerifyTest -->
-        <test-method status="PASS" signature="linksTakesToCorrectPageTest()[pri:2, instance:tests.PetStoreMenuTest@25bbe1b6]" name="linksTakesToCorrectPageTest" duration-ms="5932" started-at="2020-04-04T21:44:16Z" finished-at="2020-04-04T21:44:22Z">
+        <test-method status="PASS" signature="centerNavLinksWork()[pri:0, instance:tests.PetStoreMenuTest@25bbe1b6]" name="centerNavLinksWork" duration-ms="2059" started-at="2020-04-09T17:26:51Z" finished-at="2020-04-09T17:26:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- linksTakesToCorrectPageTest -->
-        <test-method status="PASS" signature="logInBtnTest()[pri:3, instance:tests.PetStoreMenuTest@25bbe1b6]" name="logInBtnTest" duration-ms="625" started-at="2020-04-04T21:44:22Z" finished-at="2020-04-04T21:44:22Z">
+        </test-method> <!-- centerNavLinksWork -->
+        <test-method status="PASS" signature="leftNavLinksTakesToCorrectPageTest()[pri:0, instance:tests.PetStoreMenuTest@25bbe1b6]" name="leftNavLinksTakesToCorrectPageTest" duration-ms="1475" started-at="2020-04-09T17:26:54Z" finished-at="2020-04-09T17:26:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- leftNavLinksTakesToCorrectPageTest -->
+        <test-method status="PASS" signature="logInBtnTest()[pri:0, instance:tests.PetStoreMenuTest@25bbe1b6]" name="logInBtnTest" duration-ms="468" started-at="2020-04-09T17:26:55Z" finished-at="2020-04-09T17:26:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logInBtnTest -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.PetStoreMenuTest@25bbe1b6]" name="afterClass" is-config="true" duration-ms="95" started-at="2020-04-04T21:44:22Z" finished-at="2020-04-04T21:44:22Z">
+        <test-method status="PASS" signature="upperNavLinksCorrectPageTest()[pri:0, instance:tests.PetStoreMenuTest@25bbe1b6]" name="upperNavLinksCorrectPageTest" duration-ms="1920" started-at="2020-04-09T17:26:55Z" finished-at="2020-04-09T17:26:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- upperNavLinksCorrectPageTest -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.PetStoreMenuTest@25bbe1b6]" name="afterClass" is-config="true" duration-ms="92" started-at="2020-04-09T17:26:57Z" finished-at="2020-04-09T17:26:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- tests.PetStoreMenuTest -->
     </test> <!-- Functional testing 2 on Edge -->
-    <test name="Functional testing 3 on Edge" duration-ms="22136" started-at="2020-04-04T21:44:22Z" finished-at="2020-04-04T21:44:44Z">
+    <test name="Functional testing 3 on Edge" duration-ms="22964" started-at="2020-04-09T17:26:58Z" finished-at="2020-04-09T17:27:20Z">
       <class name="tests.CartPageTest">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.CartPageTest@29ca901e]" name="setup" is-config="true" duration-ms="12484" started-at="2020-04-04T21:44:22Z" finished-at="2020-04-04T21:44:35Z">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:tests.CartPageTest@29ca901e]" name="setup" is-config="true" duration-ms="11102" started-at="2020-04-09T17:26:58Z" finished-at="2020-04-09T17:27:09Z">
           <params>
             <param index="0">
               <value>
@@ -427,19 +449,19 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="isInCart()[pri:1, instance:tests.CartPageTest@29ca901e]" name="isInCart" duration-ms="5526" started-at="2020-04-04T21:44:35Z" finished-at="2020-04-04T21:44:40Z">
+        <test-method status="PASS" signature="isInCart()[pri:1, instance:tests.CartPageTest@29ca901e]" name="isInCart" duration-ms="7754" started-at="2020-04-09T17:27:09Z" finished-at="2020-04-09T17:27:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- isInCart -->
-        <test-method status="PASS" signature="compareTotalPrices()[pri:2, instance:tests.CartPageTest@29ca901e]" name="compareTotalPrices" duration-ms="250" started-at="2020-04-04T21:44:40Z" finished-at="2020-04-04T21:44:41Z">
+        <test-method status="PASS" signature="compareTotalPrices()[pri:2, instance:tests.CartPageTest@29ca901e]" name="compareTotalPrices" duration-ms="252" started-at="2020-04-09T17:27:16Z" finished-at="2020-04-09T17:27:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- compareTotalPrices -->
-        <test-method status="PASS" signature="deleteCookiesTest()[pri:3, instance:tests.CartPageTest@29ca901e]" name="deleteCookiesTest" duration-ms="3875" started-at="2020-04-04T21:44:41Z" finished-at="2020-04-04T21:44:44Z">
+        <test-method status="PASS" signature="deleteCookiesTest()[pri:3, instance:tests.CartPageTest@29ca901e]" name="deleteCookiesTest" duration-ms="3754" started-at="2020-04-09T17:27:17Z" finished-at="2020-04-09T17:27:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteCookiesTest -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.CartPageTest@29ca901e]" name="afterClass" is-config="true" duration-ms="0" started-at="2020-04-04T21:44:44Z" finished-at="2020-04-04T21:44:44Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:tests.CartPageTest@29ca901e]" name="afterClass" is-config="true" duration-ms="99" started-at="2020-04-09T17:27:20Z" finished-at="2020-04-09T17:27:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
